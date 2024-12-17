@@ -40,22 +40,22 @@ if(isset($_GET['page'])){
     <!-- IOS 설정 -->
     <meta name="format-detection" content="telephone=no" />
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/favi/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/favi/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/favi/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/favi/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/favi/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/favi/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/favi/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/img/favi/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favi/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/favi/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favi/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/img/favi/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favi/favicon-16x16.png">
-    <link rel="manifest" href="/img/favi/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favi/favicon-16x16.png">
+    <link rel="manifest" href="../img/favi/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/img/favi/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="../img/favi/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- XEIcon -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -325,13 +325,13 @@ if(isset($_GET['page'])){
                         </form>
                         <table class="notice-table notice-table_nt">
                             <tbody>
-							<?php 
+                                <?php 
 							if ($row_num == 0) {
 							?>
                                 <tr>
                                     <td colspan="3" class="center notice-none">등록된 글이 없습니다.</td>
                                 </tr>
-							<?php
+                                <?php
 							} else {
 							$sql1 = "select * from reference where $search like '%$searchstring%' order by reference_idx desc limit $start_num, $list";
 							$result1 = mysqli_query($con, $sql1);
@@ -339,37 +339,40 @@ if(isset($_GET['page'])){
 							?>
                                 <tr>
                                     <td>
-										
-										<?php echo $number?>
-										
+
+                                        <?php echo $number?>
+
                                     </td>
                                     <td class="left">
-                                        <a href="./reference_view.html?reference_idx=<?php echo $row1['reference_idx'];?>&page=<?php echo $page?>">
+                                        <a
+                                            href="./reference_view.html?reference_idx=<?php echo $row1['reference_idx'];?>&page=<?php echo $page?>">
                                             <?php echo $row1['reference_title'];?>
                                         </a>
-                                        <span><?php echo date("y-m-d",strtotime($row1['reference_wdate']))?></span>
+                                        <span>
+                                            <?php echo date("y-m-d",strtotime($row1['reference_wdate']))?>
+                                        </span>
                                     </td>
                                 </tr>
-							<?php
+                                <?php
 							$number--;
 								}
 							}
 							?>
-                                
+
                             </tbody>
                         </table>
                         <!-- 페이지네이션 -->
                         <div class="pagination">
-						<?php 
+                            <?php 
 						if($page <= 1) { 
 						?>
-						<?php 
+                            <?php 
 						} else {
 						?>
                             <a href='?page=1'>
                                 <i class="fa-solid fa-angles-left"></i>
                             </a>
-						<?php
+                            <?php
 						}
 						if($page <= 1) { 
 						} else {
@@ -378,44 +381,48 @@ if(isset($_GET['page'])){
                             <a href='?page=<?php echo $pre;?>'>
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
-						<?php
+                            <?php
 						}
 						for($i=$block_start; $i<=$block_end; $i++){ 
 						if($page == $i){ 
 						?>
-                            <span class="checked"><?php echo $i;?></span>
-						<?php
+                            <span class="checked">
+                                <?php echo $i;?>
+                            </span>
+                            <?php
 						} else {
 						?>
-						<a href='?page=<?php echo $i;?>'><span><?php echo $i;?></span></a>
-						 <?php
+                            <a href='?page=<?php echo $i;?>'><span>
+                                    <?php echo $i;?>
+                                </span></a>
+                            <?php
 							}
 						}
 						if($page >= $total_page){ 
 						}else{
 						$next = $page + 1; 
 						?>
-                        <a href='?page=<?php echo $next;?>'>
+                            <a href='?page=<?php echo $next;?>'>
                                 <i class="fa-solid fa-angle-right"></i>
-                         </a>
-						 <?php
+                            </a>
+                            <?php
 						}
 						if($page >= $total_page){
 						?>
-						<?php
+                            <?php
 						} else {
 						?>
                             <a href='?page=<?php echo $total_page;?>'>
                                 <i class="fa-solid fa-angles-right"></i>
                             </a>
-						<?php
+                            <?php
 						}               
 						?>
                         </div>
                         <!-- 페이지네이션 -->
                         <!-- 공지사항 게시판 -->
 
-                        
+
                         <!-- 페이지네이션 -->
                         <!-- // 뉴스 게시판 -->
                     </div>

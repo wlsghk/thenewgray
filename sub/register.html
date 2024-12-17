@@ -7,22 +7,22 @@
     <!-- IOS 설정 -->
     <meta name="format-detection" content="telephone=no" />
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/favi/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/favi/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/favi/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/favi/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/favi/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/favi/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/favi/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/img/favi/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favi/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/favi/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favi/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/img/favi/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favi/favicon-16x16.png">
-    <link rel="manifest" href="/img/favi/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favi/favicon-16x16.png">
+    <link rel="manifest" href="../img/favi/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/img/favi/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="../img/favi/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- XEIcon -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -38,9 +38,9 @@
     <link rel="stylesheet" href="../css/sub/sub_common.css">
     <!-- 개별 css -->
     <link rel="stylesheet" href="../css/sub/register.css">
-	
+
     <title>The New Grey For You!</title>
-	<script language='javascript'>
+    <script language='javascript'>
         <!--
              var cnt = new Array();
              cnt[0] = new Array('전체');
@@ -74,11 +74,11 @@
      }
         //-->
     </script>
-	<script>
+    <script>
         const autoHyphen2 = (target) => {
             target.value = target.value
-            .replace(/[^0-9]/g, '')
-            .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+                .replace(/[^0-9]/g, '')
+                .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
         }
     </script>
 </head>
@@ -423,7 +423,8 @@
                                                 <label for="g_phone">핸드폰</label>
                                             </th>
                                             <td>
-                                                <input type="text" name="customer_phone" id="g_phone" maxlength="13" required oninput="autoHyphen2(this)">
+                                                <input type="text" name="customer_phone" id="g_phone" maxlength="13"
+                                                    required oninput="autoHyphen2(this)">
                                             </td>
                                         </tr>
                                         <!--<tr>
@@ -564,7 +565,7 @@
     <!-- top.js 연결 -->
     <script src="../js/top.js"></script>
     <script src="../js/city.js"></script>
-	<script src="../js/hangjungdong.js"></script>
+    <script src="../js/hangjungdong.js"></script>
     <script src="../js/phone.js"></script>
 </body>
 
