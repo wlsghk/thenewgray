@@ -1,35 +1,5 @@
-<?php
-session_start();
-include "../config/db.php";
-
-if(isset($_GET['page'])){
-	$page = $_GET['page'];
-	} else {
-	$page = 1;
-}
-              $sql = "select * from notice";
-			  $result = mysqli_query($con,$sql);
-			  $row_num = mysqli_num_rows($result); //게시판 총 레코드 수
-			  
-              $list = 10; //한 페이지에 보여줄 개수
-              $block_ct = 5; //블록당 보여줄 페이지 개수
-
-              $block_num = ceil($page/$block_ct); // 현재 페이지 블록 구하기
-              $block_start = (($block_num - 1) * $block_ct) + 1; // 블록의 시작번호
-              $block_end = $block_start + $block_ct - 1; //블록 마지막 번호
-
-              $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
-              if($block_end > $total_page) $block_end = $total_page; //만약 블록의 마지박 번호가 페이지수보다 많다면 마지박번호는 페이지 수
-              $total_block = ceil($total_page/$block_ct); //블럭 총 개수
-              $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
-
-               $idNumber = $row_num - ($page-1)*$total_page;
-
-			  $number = $row_num - $start_num;
-						
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -296,110 +266,47 @@ if(isset($_GET['page'])){
                         </form>
                         <table class="notice-table notice-table_nt">
                             <tbody>
-                                <?php 
-							if ($row_num == 0) {
-							?>
                                 <tr>
                                     <td colspan="3" class="center notice-none">등록된 글이 없습니다.</td>
                                 </tr>
-                                <?php
-							} else {
-							$sql1 = "select * from notice order by notice_idx desc limit $start_num, $list";
-							$result1 = mysqli_query($con, $sql1);
-							while($row1 = mysqli_fetch_array($result1)){ 
-							?>
                                 <tr>
                                     <td>
-                                        <?php if ($row1['notice_top'] == "1") { ?>
                                         <div class="center">공지</div>
-                                        <?php
-										} else { ?>
-                                        <?php echo $number?>
-                                        <?php
-										}
-										?>
                                     </td>
                                     <td class="left">
-                                        <a
-                                            href="./notice_view.html?notice_idx=<?php echo $row1['notice_idx'];?>&page=<?php echo $page?>">
-                                            <?php echo $row1['notice_title'];?>
+                                        <a href="./notice_view.html">
+                                            notice title
                                         </a>
                                         <span>
-                                            <?php echo date("y-m-d",strtotime($row1['notice_wdate']))?>
+                                            2024-12-17
                                         </span>
                                     </td>
                                 </tr>
-                                <?php
-							$number--;
-								}
-							}
-							?>
-
                             </tbody>
                         </table>
                         <!-- 페이지네이션 -->
                         <div class="pagination">
-                            <?php 
-						if($page <= 1) { 
-						?>
-                            <?php 
-						} else {
-						?>
-                            <a href='?page=1'>
+                            <a href=''>
                                 <i class="fa-solid fa-angles-left"></i>
                             </a>
-                            <?php
-						}
-						if($page <= 1) { 
-						} else {
-						$pre = $page-1;
-						?>
-                            <a href='?page=<?php echo $pre;?>'>
+                            <a href=''>
                                 <i class="fa-solid fa-angle-left"></i>
                             </a>
-                            <?php
-						}
-						for($i=$block_start; $i<=$block_end; $i++){ 
-						if($page == $i){ 
-						?>
                             <span class="checked">
-                                <?php echo $i;?>
+                                1
                             </span>
-                            <?php
-						} else {
-						?>
-                            <a href='?page=<?php echo $i;?>'><span>
-                                    <?php echo $i;?>
+                            <a href=''><span>
                                 </span></a>
-                            <?php
-							}
-						}
-						if($page >= $total_page){ 
-						}else{
-						$next = $page + 1; 
-						?>
-                            <a href='?page=<?php echo $next;?>'>
+                            <a href=''>
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
-                            <?php
-						}
-						if($page >= $total_page){
-						?>
-                            <?php
-						} else {
-						?>
-                            <a href='?page=<?php echo $total_page;?>'>
+                            <a href=''>
                                 <i class="fa-solid fa-angles-right"></i>
                             </a>
-                            <?php
-						}               
-						?>
                         </div>
                         <!-- 페이지네이션 -->
                         <!-- 공지사항 게시판 -->
 
-
-                        <!-- 페이지네이션 -->
                         <!-- // 뉴스 게시판 -->
                     </div>
                 </section>
