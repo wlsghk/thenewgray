@@ -69,10 +69,222 @@
     <div class="wrapper">
 
         <!-- gnb 메뉴 -->
-        <? include "gnb.html"?>
+        <div class="black-box hidden"></div>
+        <nav class="gnb hidden">
+            <div class="gnb-tab">
+                <a href="/index.html">
+                    <img src="/img/logo/logo.png" alt="더뉴그레이 로고">
+                </a>
+                <button class="pointer">
+                    <i class="xi-close"></i>
+                </button>
+            </div>
+            <ul class="gnb-menu">
+                <li>
+                    <a href="#">
+                        <span>
+                            The New Grey
+                        </span>
+                        <i class="xi-plus"></i>
+                        <i class="xi-minus hidden"></i>
+                    </a>
+                    <ul class="gnb-open hidden">
+                        <li>
+                            <a href="/sub/summary.html">사업개요</a>
+                        </li>
+                        <li>
+                            <a href="/sub/location.html">입지환경</a>
+                        </li>
+                        <li>
+                            <a href="/sub/premium.html">PREMIUM</a>
+                        </li>
+                        <li>
+                            <a href="/sub/community.html">COMMUNITY</a>
+                        </li>
+                        <li>
+                            <a href="/sub/unit.html">THE UNIT</a>
+                        </li>
+                        <!-- <li>
+                            <a href="/sub/guide.html">분양안내</a>
+                        </li> -->
+                    </ul>
+                    <ul class="gnb-img hidden">
+                        <li>
+                            <img src="/img/gnb-img_01.png" alt="더뉴그레이 내부 이미지">
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/sub/notice.html">공지사항&뉴스</a></li>
+                <li><a href="/sub/register.html">관심고객등록</a></li>
+            </ul>
+        </nav>
         <!-- // gnb 메뉴 -->
         <!-- 헤더 -->
-        <? include "header.html"?>
+        <header class="header">
+            <div class="inner">
+                <nav class="nav nav-t">
+                    <h1 class="logo">
+                        <a href="/index.html">
+                            <img src="/img/logo/logo-white.png" alt="더뉴그레이 로고">
+                        </a>
+                    </h1>
+                    <!-- <button aria-label="navigation menu" class="pointer">
+                                <i class="xi-bars ham"></i>
+                            </button> -->
+                </nav>
+                <!-- pc -->
+                <nav class="nav nav-b" aria-label="main navigation">
+                    <ul>
+                        <!-- <li>
+                                    <a href="/index.html">HOME</a>
+                                </li> -->
+                        <li>
+                            <a href="/sub/summary.html">사업개요</a>
+                            <!-- <ul class="nav-sub">
+                                <li>
+                                    <a href="/sub/summary.html">사업개요</a>
+                                </li>
+                                <li>
+                                    <a href="/sub/directions.html">오시는 길</a>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <a href="/sub/location.html">입지환경</a>
+                        </li>
+                        <!-- <li>
+                            <a href="/sub/premium.html">THE NEW GREY PREMIUM</a>
+                        </li> -->
+                        <li>
+                            <a href="/sub/premium.html">PREMIUM</a>
+                        </li>
+                        <!-- <li>
+                            <a href="/sub/community.html">THE NEW GREY COMMUNITY</a>
+                        </li> -->
+                        <li>
+                            <a href="/sub/community.html">COMMUNITY</a>
+                        </li>
+                        <li>
+                            <a href="/sub/unit.html">THE UNIT</a>
+                        </li>
+                        <li>
+                            <a href="/sub/ad.html">홍보영상</a>
+                        </li>
+                        <!-- <li>
+                                    <a href="/sub/guide.html">분양안내</a>
+                                </li> -->
+                        <li>
+                            <a href="/sub/recruit.html">입소자모집공고</a>
+                        </li>
+                        <li>
+                            <a href="/sub/notice.html">공지사항&뉴스</a>
+                        </li>
+                        <li>
+                            <a href="/sub/reference.html">자료실</a>
+                        </li>
+                        <li>
+                            <a href="/sub/register.html">관심고객등록</a>
+                        </li>
+                        <li>
+                            <a href="/sub/application.html">청약신청위임장</a>
+                        </li>
+                        <li>
+                            <a href="/mgm/index.html">협력업체등록</a>
+                        </li>
+                        <li>
+                            <a href="/sub/directions.html">홍보관위치</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- // pc -->
+                <!-- 태블릿 -->
+                <nav class="nav nav-b nav-tb" aria-label="main navigation">
+                    <ul>
+                        <!-- <li>
+                                    <a href="/index.html">HOME</a>
+                                </li> -->
+                        <li>
+                            <a href="/sub/summary.html">사업개요</a>
+                            <ul class="nav-sub">
+                                <li>
+                                    <a href="/sub/summary.html">사업개요</a>
+                                </li>
+                                <li>
+                                    <a href="/sub/directions.html">오시는 길</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/sub/location.html">입지환경</a>
+                        </li>
+                        <li>
+                            <a href="/sub/premium.html">PREMIUM</a>
+                        </li>
+                        <li>
+                            <a href="/sub/community.html">COMMUNITY</a>
+                        </li>
+                        <li>
+                            <a href="/sub/unit.html">UNIT</a>
+                        </li>
+                        <li>
+                            <a href="/sub/ad.html">영상</a>
+                        </li>
+                        <!-- <li>
+                                                            <a href="/sub/guide.html">분양안내</a>
+                                                        </li> -->
+                        <li>
+                            <a href="/sub/notice.html">공지&뉴스</a>
+                        </li>
+                        <li>
+                            <a href="/sub/register.html">관심고객등록</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- // 태블릿 -->
+                <nav class="nav nav-b nav-m" aria-label="main navigation">
+                    <ul>
+                        <!-- <li>
+                                    <a href="/index.html">HOME</a>
+                                </li> -->
+                        <li>
+                            <a href="/sub/summary.html">개요</a>
+                            <ul class="nav-sub">
+                                <li>
+                                    <a href="/sub/summary.html">개요</a>
+                                </li>
+                                <li>
+                                    <a href="/sub/directions.html">약도</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/sub/location.html">입지</a>
+                        </li>
+                        <li>
+                            <a href="/sub/premium.html">PREMIUM</a>
+                        </li>
+                        <li>
+                            <a href="/sub/community.html">COMMU</a>
+                        </li>
+                        <li>
+                            <a href="/sub/unit.html">UNIT</a>
+                        </li>
+                        <li>
+                            <a href="/sub/ad.html">영상</a>
+                        </li>
+                        <!-- <li>
+                                            <a href="/sub/guide.html">분양안내</a>
+                                        </li> -->
+                        <li>
+                            <a href="/sub/notice.html">공지</a>
+                        </li>
+                        <li>
+                            <a href="/sub/register.html">관심고객등록</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <!-- // 헤더 -->
         <!-- 메인 -->
         <main class="main">
@@ -151,7 +363,62 @@
         </main>
         <!-- // 메인 -->
         <!-- 푸터 -->
-        <? include "footer.html"?>
+        <footer class="footer">
+            <div class="inner">
+                <div class="footer-card">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <div class="footer-logo_m">
+                                <strong>시행</strong>
+                                <h1 class="footer-logo_img">
+                                    <img src="/img/logo/mk_logo.png" alt="매경주택 로고">
+                                </h1>
+                            </div>
+                            <div class="footer-logo_m">
+                                <strong>시공</strong>
+                                <h1 class="footer-logo_img">
+                                    <img src="/img/logo/daeryuk.png" alt="대륙건설 로고">
+                                </h1>
+                            </div>
+                            <div class="footer-logo_m">
+                                <strong>자금관리 신탁사</strong>
+                                <h1 class="footer-logo_img">
+                                    <img src="/img/logo/daehan.png" alt="대한토지신탁(주) 로고">
+                                </h1>
+                            </div>
+                            <div class="footer-logo_d">
+                                <strong>운영 지원사</strong>
+                                <h1 class="footer-logo_img">
+                                    <img src="/img/logo/hotel.png" alt="특급호텔 로고">
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="footer-call">
+                            <img src="/img/icon/call.png" alt="전화 아이콘">
+                            <address>
+                                053.793.1234
+                            </address>
+                        </div>
+                    </div>
+                    <div class="footer-txt">
+                        <strong>법인명: (주)매경주택</strong>
+                        <strong>대표자: 김중기</strong>
+                        <strong>사업자번호: 377-85-02375</strong>
+                        <p>
+                            ※ 본 사이트의 CG 및 일러스트, 사진, 이미지 내용은 소비자의 이해를 돕기 위해 제작한 것으로 실제와 다를 수 있습니다.
+                            <br />
+                            ※ 본 사이트의 제작 과정상 오류가 발생할수 있습니다.
+                            <br />
+                            ※ 본 사이트의 내부공간 디자인은 본 공사 시 현장여건에 따라 사용된 이미지 및 CG와는 상이하게 시공될 수 있으며 가구 및 집기 표현은 소비자의 이해를 돕기 위해
+                            제작된 것으로 추후 변경될 수 있습니다.
+                            <br />
+                            ※ 본사이트의 개발계획 등의 내용은 지자체, 해당기관의 상황에 따라 사업추진 중 변경 될 수 있습니다.
+                        </p>
+                        <p>ⓒ (주)매경주택. all right reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         <!-- // 푸터 -->
         <!-- 퀵바 -->
         <aside class="quick" id="quick">
